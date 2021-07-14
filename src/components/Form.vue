@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="FormHandler">
+  <form @submit.prevent="formHandler">
     <input type="text" placeholder="Description..." v-model="formData.desc" />
     <input type="number" placeholder="Value..." v-model="formData.value" />
     <input type="date" placeholder="Date..." v-model="formData.date" />
@@ -21,7 +21,7 @@ export default {
       date: null,
     });
 
-    function FormHandler() {
+    function formHandler() {
       emit("add-income", {
         desc: formData.desc,
         value: formData.value,
@@ -34,7 +34,7 @@ export default {
     }
 
     return {
-      FormHandler,
+      formHandler,
       formData,
     };
   },
