@@ -1,9 +1,9 @@
 <template>
   <div class="income-item">
     <div class="removeItem">x</div>
-    <div class="desc">Description...</div>
-    <div class="price">£0</div>
-    <div class="date">Date...</div>
+    <div class="desc">{{ income.desc }}</div>
+    <div class="price">£{{ income.value }}</div>
+    <div class="date">{{ income.date }}</div>
   </div>
 </template>
 
